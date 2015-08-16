@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="247" pageHeight="144" columnWidth="242" leftMargin="2" rightMargin="3" topMargin="3" bottomMargin="3">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="164"/>
+	<parameter name="idStudent" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<parameter name="add1" class="java.lang.String"/>
+	<parameter name="proPath" class="java.lang.String"/>
+	<parameter name="barPath" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="138" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="10" y="5" width="232" height="133" backcolor="#CCFFFF"/>
+			</rectangle>
+			<elementGroup>
+				<textField>
+					<reportElement x="62" y="46" width="88" height="27"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{add1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="19" width="31" height="10"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Name]]></text>
+				</staticText>
+				<image>
+					<reportElement x="104" y="91" width="119" height="25"/>
+					<box>
+						<pen lineStyle="Double"/>
+						<topPen lineStyle="Double"/>
+						<leftPen lineStyle="Double"/>
+						<bottomPen lineStyle="Double"/>
+						<rightPen lineStyle="Double"/>
+					</box>
+					<imageExpression><![CDATA[$P{barPath}.toString()]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="20" y="9" width="31" height="10"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Student ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="29" width="31" height="17"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[DOB]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="62" y="9" width="67" height="10"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{idStudent}]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="159" y="9" width="64" height="71"/>
+					<imageExpression><![CDATA[$P{proPath}.toString()]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="62" y="29" width="67" height="17"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="46" width="31" height="10"/>
+					<textElement>
+						<font size="7" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Address]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="62" y="19" width="88" height="10"/>
+					<textElement>
+						<font size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<image>
+				<reportElement x="20" y="80" width="72" height="51"/>
+				<imageExpression><![CDATA["F:\\Working Directory\\UCSC\\java\\Final Project - Andrew - 763052222V\\Net Beans\\StdAdmin\\img\\bcGalleSmall.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

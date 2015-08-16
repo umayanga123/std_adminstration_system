@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <login>
+        <db-host>localhost</db-host>
+        <db-port>3306</db-port>
+        <db-username>root</db-username>
+        <db-password></db-password>
+        <db-name>stadmin</db-name>
+    </login>
+    <client>
+        <name>British College, Galle</name>
+        <address>17, Kalegana Junction, Galle</address>
+        <tel>0912374744</tel>
+    </client>
+    <payment>
+        <payduedate>7</payduedate>
+    </payment>
+  
+</config>
+
