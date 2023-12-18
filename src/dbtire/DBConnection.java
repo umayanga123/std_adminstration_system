@@ -20,7 +20,7 @@ public class DBConnection {
 
     private DBConnection() throws ClassNotFoundException, SQLException {
         String[] conDetails = CommonMethods.readXmlConnectionString();
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         con=DriverManager.getConnection(conDetails[0],conDetails[1],conDetails[2]);
     }
 

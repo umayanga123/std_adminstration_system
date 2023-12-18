@@ -18,7 +18,7 @@ import model.User;
 public class UserHandler {
 
     public static int addUser(User usr) throws SQLException, ClassNotFoundException {
-        String sql = "INSERT INTO user VALUES ('" + usr.getIduser() + "','" + usr.getName() + "',(select password('" + usr.getPassword() + "'))," + usr.getCapacity() + ",'" + CommonMethods.getCurrentDateTime() + "' )";
+        String sql = "INSERT INTO user VALUES ('" + usr.getIduser() + "','" + usr.getName() + "',(SHA1('" + usr.getPassword() + "'))," + usr.getCapacity() + ",'" + CommonMethods.getCurrentDateTime() + "' )";
         int res = DBHandle.setData(DBConnection.getDBConnection(),sql);
         return res;
     }
@@ -84,7 +84,7 @@ public class UserHandler {
 
     public static int validateUser(String iduser, String pass) throws SQLException, ClassNotFoundException {
         int valid = 0;
-        String sql = "select password,(select password('" + pass + "')),capacity from user where iduser='" + iduser + "'";
+        String sql = "SELECT SHA1('"+ pass + "') AS hashed_value, password, capacity FROM user WHERE iduser = '"+iduser+"'";
         ResultSet res = DBHandle.getData(DBConnection.getDBConnection(),sql);
         if (res.next())
             if (res.getString(1).equals(res.getString(2))) {

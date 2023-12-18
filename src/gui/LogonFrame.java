@@ -162,10 +162,7 @@ public class LogonFrame extends javax.swing.JFrame {
                 passText.transferFocusBackward();
             }
 
-        } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(this, "please check your connection", "Error", JOptionPane.ERROR_MESSAGE);
-            Logger.getLogger(LogonFrame.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             JOptionPane.showMessageDialog(this, "please check your connection", "Error", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(LogonFrame.class.getName()).log(Level.SEVERE, null, ex);
         }

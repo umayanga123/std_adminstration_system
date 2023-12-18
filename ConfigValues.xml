@@ -5,7 +5,7 @@
         <db-port>3306</db-port>
         <db-username>root</db-username>
         <db-password></db-password>
-        <db-name>stadmin</db-name>
+        <db-name>stdadmin</db-name>
     </login>
     <client>
         <name>British College, Galle</name>
