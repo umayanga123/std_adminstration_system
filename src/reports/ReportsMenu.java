@@ -33,7 +33,7 @@ public class ReportsMenu extends javax.swing.JFrame {
         setLocationRelativeTo(getRootPane());
         setIconImage(new ImageIcon("./img/apple.png").getImage());
         setResizable(false);
-        setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(ReportsMenu.DO_NOTHING_ON_CLOSE);
     }
 
     /** This method is called from within the constructor to
@@ -88,7 +88,7 @@ public class ReportsMenu extends javax.swing.JFrame {
 
     private void compStdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compStdButtonActionPerformed
         String reportSource = "./jasper/StudentList.jrxml";
-        Map<String, Object> param = new HashMap<String, Object>();
+        Map<String, Object> param = new HashMap<>();
         try {
             JasperReport jr = JasperCompileManager.compileReport(reportSource);
             JasperPrint jp = JasperFillManager.fillReport(jr, param, DBConnection.getDBConnection());
@@ -114,13 +114,9 @@ public class ReportsMenu extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-                ReportsMenu a = new ReportsMenu();
-                a.setVisible(true);
-
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            ReportsMenu a = new ReportsMenu();
+            a.setVisible(true);
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

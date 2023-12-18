@@ -30,8 +30,8 @@ public class Xml {
 
     private String name;
     private String content;
-    private Map<String, String> nameAttributes = new HashMap<String, String>();
-    private Map<String, ArrayList<Xml>> nameChildren = new HashMap<String, ArrayList<Xml>>();
+    private Map<String, String> nameAttributes = new HashMap<>();
+    private Map<String, ArrayList<Xml>> nameChildren = new HashMap<>();
 
     public Xml(InputStream inputStream, String rootName) {
         this(rootElement(inputStream, rootName));

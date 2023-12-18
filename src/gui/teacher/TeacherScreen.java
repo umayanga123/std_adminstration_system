@@ -37,7 +37,7 @@ public class TeacherScreen extends javax.swing.JFrame {
         setLocationRelativeTo(getRootPane());
         setAlwaysOnTop(true);
         setResizable(false);
-        setDefaultCloseOperation(this.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(TeacherScreen.DO_NOTHING_ON_CLOSE);
         setIconImage(new ImageIcon("./img/apple.png").getImage());
         saveButton.setEnabled(false);
         cancelButton.setEnabled(false);

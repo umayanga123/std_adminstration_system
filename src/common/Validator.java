@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package common;
 
 import javax.swing.JTextField;
@@ -11,14 +10,13 @@ import javax.swing.JTextField;
  *
  * @author user
  */
-
 public class Validator {
 
- public static boolean checkInt(String s) {
+    public static boolean checkInt(String s) {
         try {
-            Long.parseLong(s);
+            Long.valueOf(s);
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             return false;
         }
     }
@@ -39,9 +37,7 @@ public class Validator {
         }
     }
 
-
-
-    public static boolean  validateEmail(String s){
-         return   s.contains("@") && s.contains(".") ;
+    public static boolean validateEmail(String s) {
+        return s.contains("@") && s.contains(".");
     }
 }

@@ -3,11 +3,13 @@
  * and open the template in the editor.
  */
 package model;
+
 /**
  *
  * @author Uma
  */
 public class Student {
+
     private String idStudent;
     private String firstName;
     private String middleNames;
@@ -49,7 +51,6 @@ public class Student {
     private String lastModified;
     private String sibGroup;
     private String lastPayMon;
-
 
     public Student() {
     }
@@ -102,8 +103,6 @@ public class Student {
         this.lastPayMon = lastPayMon;
 
     }
-
-
 
     /**
      * @return the idStudent
@@ -678,6 +677,5 @@ public class Student {
     public void setLastPayMon(String lastPayMon) {
         this.lastPayMon = lastPayMon;
     }
-
 
 }
